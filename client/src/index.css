@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+:root {
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 overflow-x-hidden;
+}
+
+.glass-morphism {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.dark .glass-morphism {
+  @apply bg-slate-900/70 backdrop-blur-md border border-slate-700/30 shadow-2xl;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-indigo-600 text-white rounded-xl font-semibold transition-all duration-300 hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-500/30 active:scale-95;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-white text-indigo-600 border border-indigo-100 rounded-xl font-semibold transition-all duration-300 hover:bg-indigo-50 hover:border-indigo-200 active:scale-95;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/10;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-indigo-200 rounded-full hover:bg-indigo-300 transition-colors;
+}
